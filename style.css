@@ -79,7 +79,7 @@ body {
   flex-direction: column;
   padding-bottom: 12px;
   border-radius: 0 0 20px 20px;
-  box-shadow: rgba(119, 119, 119, 0.9) 0px 0px 16px;
+  box-shadow: rgba(119, 119, 119, 0.5) 0px -2px 8px;
 }
 #top_box .buttons {
   display: flex;
@@ -95,7 +95,7 @@ body {
   display: grid;
   place-items: center;
   font-size: 1.25rem;
-  box-shadow: #777 0px 0px 24px;
+  box-shadow: rgba(119, 119, 119, 0.5) 0px 0px 8px;
 }
 #top_box .buttons .btn i:nth-child(2) {
   color: white;
@@ -138,7 +138,6 @@ body {
   display: grid;
   place-items: center;
   font-size: 0.75rem;
-  box-shadow: #777 0px 0px 24px;
 }
 #top_box #control_week .left i:nth-child(2) {
   color: white;
@@ -159,7 +158,7 @@ body {
 #top_box #date_select .day_card {
   cursor: pointer;
   background: white;
-  box-shadow: #777 0px 0px 16px;
+  box-shadow: rgba(119, 119, 119, 0.5) 0px 0px 4px;
   width: 14.2857142857%;
   aspect-ratio: 10/13;
   border-radius: 18px;
@@ -193,7 +192,7 @@ body {
 #top_box #date_select .active {
   color: white;
   background: #3b85ff !important;
-  box-shadow: #3b85ff 0px 0px 16px;
+  box-shadow: #3b85ff 0px 0px 4px;
 }
 #top_box #date_select .active .space {
   background: white;
@@ -208,7 +207,7 @@ body {
   z-index: 50;
   background: white;
   width: 100%;
-  height: calc(100vh - 170px);
+  height: calc(100vh - 500px);
   transform: translateY(-25px);
   padding-top: 25px;
 }
@@ -249,7 +248,7 @@ body {
   margin-right: 10px;
   padding: 20px calc(var(--pad) / 2) 6px var(--pad);
   border: 1px solid hsl(0deg, 0%, 70%);
-  box-shadow: rgba(119, 119, 119, 0.75) 0px 4px 16px 0px;
+  box-shadow: rgba(119, 119, 119, 0.3) 0px 2px 8px 0px;
   position: relative;
   z-index: 10;
   width: calc(100% - 22px);

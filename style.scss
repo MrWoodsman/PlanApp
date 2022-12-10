@@ -78,7 +78,7 @@ body {
     flex-direction: column;
     padding-bottom: 12px;
     border-radius: 0 0 20px 20px;
-    box-shadow: rgba(119, 119, 119, 0.9) 0px 0px 16px;
+    box-shadow: rgba(119, 119, 119, 0.5) 0px -2px 8px;
     .buttons {
         display: flex;
         justify-content: space-between;
@@ -92,7 +92,7 @@ body {
             display: grid;
             place-items: center;
             font-size: 1.25rem;
-            box-shadow: #777 0px 0px 24px;
+            box-shadow: rgba(119, 119, 119, 0.5) 0px 0px 8px;
             i:nth-child(2) {
                 color: white;
                 transform: translateX(5px);
@@ -135,7 +135,7 @@ body {
             display: grid;
             place-items: center;
             font-size: .75rem;
-            box-shadow: #777 0px 0px 24px;
+            // box-shadow: #777 0px 0px 24px;
         }
         .left i:nth-child(2) {
             color: white;
@@ -156,7 +156,7 @@ body {
         .day_card {
             cursor: pointer;
             background: white;
-            box-shadow: #777 0px 0px 16px;
+            box-shadow: rgba(119, 119, 119, 0.5) 0px 0px 4px;
             width: calc(100% / 7);
             aspect-ratio: 10/13;
             border-radius: 18px;
@@ -192,7 +192,7 @@ body {
         .active {
             color: white;
             background: #3b85ff !important;
-            box-shadow: #3b85ff 0px 0px 16px;
+            box-shadow: #3b85ff 0px 0px 4px;
             .space {
                 background: white;
             }
@@ -209,7 +209,7 @@ body {
     z-index: 50;
     background: white;
     width: 100%;
-    height: calc(100vh - 170px);
+    height: calc(100vh - 500px);
     transform: translateY(-25px);
     padding-top: 25px;
     .row {
@@ -251,7 +251,7 @@ body {
                 margin-right: 10px;
                 padding: 20px calc(var(--pad) / 2) 6px var(--pad);
                 border: 1px solid hsl(0, 0%, 70%);
-                box-shadow: rgba(119, 119, 119, 0.75) 0px 4px 16px 0px;
+                box-shadow: rgba(119, 119, 119, 0.3) 0px 2px 8px 0px;
                 position: relative;
                 z-index: 10;
                 width: calc(100% - 22px);

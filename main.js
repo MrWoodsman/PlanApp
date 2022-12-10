@@ -213,3 +213,11 @@ document.querySelectorAll('.day_card').forEach((b) => {
         console.warn(`${e.target.getAttribute('day_num')}_${e.target.getAttribute('month_num')}_${e.target.getAttribute('year_num')}`);
     })
 })
+
+function reportWindowSize() {
+    const topMenu = document.querySelector('#top_box')
+    const bottomMenu = document.querySelector('#navigation')
+    document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px - ${bottomMenu.offsetHeight}px + 30px)`
+}
+reportWindowSize()
+window.onresize = reportWindowSize;
