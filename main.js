@@ -204,6 +204,12 @@ document.querySelector('#right_week').addEventListener('click',(e) => {
     change_week += 7
     GetActualData()
 })
+// Restartowanie do aktualnej daty
+document.querySelector('#date_information').addEventListener('click',(e) => {
+    backup_change_week = change_week
+    change_week = 0
+    GetActualData()
+})
 
 document.querySelectorAll('.day_card').forEach((b) => {
     b.addEventListener('click',(e) => {
@@ -213,9 +219,10 @@ document.querySelectorAll('.day_card').forEach((b) => {
 
 function reportWindowSize() {
     const topMenu = document.querySelector('#top_box')
-    // const bottomMenu = document.querySelector('#navigation')
+    const bottomMenu = document.querySelector('#navigation')
+    console.warn(1);
     // document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px - ${bottomMenu.offsetHeight}px + 30px)`
-    document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px + 25px)`
+    document.querySelector('#day_box').style.height = `calc(100% - ${topMenu.offsetHeight}px - ${bottomMenu.offsetHeight}px + 25px)`
 }
 reportWindowSize()
 window.onresize = reportWindowSize;
