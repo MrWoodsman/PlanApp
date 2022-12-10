@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <!-- BootsTrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <section id="top_box">
+        <section class="buttons">
+            <div class="btn"><i class="bi bi-caret-left-fill"></i><i class="bi bi-caret-left-fill"></i></div>
+            <div class="btn"><i class="bi bi-gear"></i></div>
+        </section>
+        <section id="date_information">
+            <h1 id="display_week">Poniedziałek, 15 Grudzień 2022</h1>
+        </section>
+        <section id="date_select" style="display: flex;">
+            <div id="control_week">
+                <div class="button_week left" id="left_week"><i class="bi bi-caret-left-fill"></i><i class="bi bi-caret-left-fill"></i></div><div class="button_week right" id="right_week"><i class="bi bi-caret-right-fill"></i><i class="bi bi-caret-right-fill"></i></div>
+            </div>
+            <div class="day_card active"><h1 class="day">PON</h1><div class="space"></div><h1 class="day_num">15</h1></div>
+            <div class="day_card"><h1 class="day">WTO</h1><div class="space"></div><h1 class="day_num">16</h1></div>
+            <div class="day_card"><h1 class="day">ŚRO</h1><div class="space"></div><h1 class="day_num">17</h1></div>
+            <div class="day_card"><h1 class="day">CZW</h1><div class="space"></div><h1 class="day_num">18</h1></div>
+            <div class="day_card"><h1 class="day">PIĄ</h1><div class="space"></div><h1 class="day_num">19</h1></div>
+            <div class="day_card"><h1 class="day">SOB</h1><div class="space"></div><h1 class="day_num">20</h1></div>
+            <div class="day_card"><h1 class="day">NIED</h1><div class="space"></div><h1 class="day_num">21</h1></div>
+        </section>
+    </section>
+
+    <section id="day_box">
+        <div id="time_stamp"><div class="time">15:00</div></div>
+        <!-- <div class="row"><div class="time_stamp"><h1>8:00</h1><div class="bar"></div></div><div class="event_box"><div class="event"></div></div></div> -->
+    </section>
+
+    <nav id="navigation">
+        <i class="bi bi-house"></i>
+        <i class="bi bi-person"></i>
+        <i class="bi bi-plus" id="add_event"><div class="bg"></div></i>
+        <i class="bi bi-calendar2 active"></i>
+        <i class="bi bi-bell"></i>
+    </nav>
+</body>
+    <script src="main.js"></script>
+</html>
