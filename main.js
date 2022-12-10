@@ -155,9 +155,6 @@ let SliceNum
 if (YearFormat) { SliceNum = 0 } else { SliceNum = 2}
 
 function GetActualData() {
-    // Ustalanie daty dla indykatorów dni
-    // Robiłem to z 1,5H 🤯
-    // Jednak coś nie działało i robiółem to 2H a może i więcej
     const boxes = document.querySelectorAll('.day_card')
     for (let index = 0; index < 7; index++) {
         const w0 = new Date()
@@ -216,8 +213,9 @@ document.querySelectorAll('.day_card').forEach((b) => {
 
 function reportWindowSize() {
     const topMenu = document.querySelector('#top_box')
-    const bottomMenu = document.querySelector('#navigation')
-    document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px - ${bottomMenu.offsetHeight}px + 30px)`
+    // const bottomMenu = document.querySelector('#navigation')
+    // document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px - ${bottomMenu.offsetHeight}px + 30px)`
+    document.querySelector('#day_box').style.height = `calc(100vh - ${topMenu.offsetHeight}px + 25px)`
 }
 reportWindowSize()
 window.onresize = reportWindowSize;

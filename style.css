@@ -210,6 +210,7 @@ body {
   height: calc(100vh - 500px);
   transform: translateY(-25px);
   padding-top: 25px;
+  padding-bottom: 50px;
 }
 #day_box .row {
   width: 100%;
