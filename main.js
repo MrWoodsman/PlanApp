@@ -438,7 +438,7 @@ window.addEventListener('load', (event) => {
     console.log(JSON.parse(localStorage.getItem('events')));
     events = JSON.parse(localStorage.getItem('events'))
     if(events == null) {
-        event = [{'id':0,'date':'11-12-2000','name':'TEST','start':'0','duration':'1','color':'#ba2534','repet_destinition':'none'}]
+        events = [{'id':0,'date':'11-12-2000','name':'TEST','start':'0','duration':'1','color':'#ba2534','repet_destinition':'none'}]
     }
     SetDeafultDate()
 });
