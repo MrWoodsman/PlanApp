@@ -24,16 +24,16 @@ body {
   z-index: 75;
   width: 100%;
   background: white;
-  height: 50px;
+  height: 40px;
   bottom: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: #777 0px 0px 24px;
+  box-shadow: rgba(119, 119, 119, 0.5) 0px -1px 8px;
 }
 #navigation i {
   color: gray;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 0;
   -webkit-text-stroke: 0.5px;
 }
@@ -43,19 +43,20 @@ body {
 }
 #navigation .active::after {
   content: "";
-  width: 25px;
-  height: 5px;
+  width: 20px;
+  height: 4px;
   background: #111;
   border-radius: 0 0 8px 8px;
   position: absolute;
-  left: 0;
-  top: -13px;
+  left: 50%;
+  transform: translate(-50%);
+  top: -10px;
 }
 #navigation #add_event {
   -webkit-text-stroke: 0px;
   background: #3b85ff;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   border-radius: 50%;
   position: relative;
 }
@@ -206,11 +207,12 @@ body {
 
 #day_box {
   overflow-y: scroll;
+  overflow-x: hidden;
   position: relative;
   z-index: 50;
   background: white;
   width: 100%;
-  height: calc(100% - 75px);
+  height: calc(100% - 50px);
   transform: translateY(-25px);
   padding-top: 25px;
   box-sizing: border-box;
@@ -255,12 +257,12 @@ body {
   border: 1px solid hsl(0deg, 0%, 70%);
   box-shadow: rgba(119, 119, 119, 0.3) 0px 2px 8px 0px;
   position: relative;
+  transform: translateY(37px);
   z-index: 10;
   width: calc(100% - 22px);
   height: 100%;
   background: white;
   border-radius: 12px;
-  transform: translateY(37px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -305,6 +307,17 @@ body {
   transform: translateY(61px);
   z-index: 25;
 }
+#time_stamp::before {
+  z-index: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(transparent, #3b85ff);
+  position: absolute;
+  left: 0;
+  top: 0px;
+  transform: translateY(-100%);
+}
 #time_stamp .time {
   background: #3b85ff;
   position: absolute;
@@ -315,4 +328,116 @@ body {
   border-radius: 24px;
   line-height: 100%;
   transform: translate(15px, calc(-50% + 2px));
+}
+
+#view_calendar {
+  height: 100%;
+}
+
+#view_add_event {
+  display: none;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+  z-index: 100;
+  -webkit-animation: opacity_animation 250ms ease;
+          animation: opacity_animation 250ms ease;
+}
+#view_add_event .content {
+  -webkit-animation: roll_down 250ms ease;
+          animation: roll_down 250ms ease;
+  padding: 24px 12px 36px 12px;
+  min-height: 400px;
+  gap: 8px;
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+#view_add_event .content h1 {
+  text-align: center;
+}
+#view_add_event .content label {
+  font-weight: 400;
+}
+#view_add_event .content input {
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: rgba(119, 119, 119, 0.3) 0px 4px 8px;
+  height: 35px;
+  border: 1px solid rgb(182, 182, 182);
+}
+#view_add_event .content .button_box {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+#view_add_event .content .button_box button {
+  border: none;
+  width: 50%;
+  background: var(--bg);
+  box-shadow: var(--bg) 0px 2px 10px 0px;
+  padding: 12px 12px;
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: 16px;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+#view_add_event .exit {
+  height: 0%;
+  width: 100%;
+}
+
+@-webkit-keyframes jump-in {
+  0% {
+    transform: translateY(37px) translateX(100%);
+  }
+  75% {
+    transform: translateY(37px) translateX(-10%);
+  }
+  100% {
+    transform: translateY(37px) translateX(0);
+  }
+}
+
+@keyframes jump-in {
+  0% {
+    transform: translateY(37px) translateX(100%);
+  }
+  75% {
+    transform: translateY(37px) translateX(-10%);
+  }
+  100% {
+    transform: translateY(37px) translateX(0);
+  }
+}
+@-webkit-keyframes roll_down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes roll_down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes opacity_animation {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes opacity_animation {
+  from {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
