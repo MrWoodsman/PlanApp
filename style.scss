@@ -18,12 +18,13 @@ body {
 }
 
 #navigation {
-    position: absolute;
+    position: fixed;
     z-index: 75;
-    width: 100%;
+    width: 100vw;
     background: white;
     height: 40px;
     bottom: 0;
+    left: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

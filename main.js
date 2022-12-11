@@ -92,7 +92,8 @@ function CreateEvents(e) {
             }
         } else {
             const x = durVal[1]
-            Eminute = '0'+x
+            // Eminute = '0'+x
+            Eminute = 150 / x
         }
 
         
@@ -111,6 +112,7 @@ function CreateEvents(e) {
                 }
             }
         }
+        console.warn(Eminute);
         // console.warn(`START: ${Shour}:${Sminute}`);
         // console.warn(`END: ${Ehour}:${Eminute}`);
         cont = `<h1 class="title">${e.name}</h1><p class="description">${Shour}:${Sminute} - ${Ehour}:${Eminute}</p><i class="bi bi-three-dots event_settings" onclick="removeEvent(this)"></i>`
@@ -438,7 +440,8 @@ window.addEventListener('load', (event) => {
     console.log(JSON.parse(localStorage.getItem('events')));
     events = JSON.parse(localStorage.getItem('events'))
     if(events == null) {
-        events = [{'id':0,'date':'11-12-2000','name':'TEST','start':'0','duration':'1','color':'#ba2534','repet_destinition':'none'}]
+        const t = new Date()
+        events = [{'id':0,'date':`${t.getDate()}-${t.getMonth()+1}-${t.getFullYear()}`,'name':'Przykładowe wydarzenie','start':'6','duration':'2','color':'#ba2534','repet_destinition':'none'}]
     }
     SetDeafultDate()
 });
